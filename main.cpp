@@ -27,9 +27,9 @@ namespace detail
     {
         if constexpr (N % 5 == 0 and N % 3 == 0)
             return fizzbuzz_array;
-        else if constexpr (N % 5 == 0)
-            return fizz_array;
         else if constexpr (N % 3 == 0)
+            return fizz_array;
+        else if constexpr (N % 5 == 0)
             return buzz_array;
         else
             return num_to_string<N>;
